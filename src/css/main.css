@@ -224,8 +224,8 @@ html {
     font-size: 2em;
 }
 .nav-link-title{
-    font-size: 1em;
-    margin-left: 1em;
+    font-size: 16px;
+    margin-left: 16px;
 }
 
 .nav-header,
@@ -425,7 +425,7 @@ iframe{
 
 /**************************************** Applied styles ********************************************/
 .expand-sidebar{
-    display: initial;
+    display: inline;
     width: 180px;
     z-index: 1;
 }
@@ -507,7 +507,7 @@ iframe{
     }
     .nav-header,
     .nav-link-title{
-        display: initial;
+        display: inline-block;
     }
     .nav-header{
         font-size: 48px;
