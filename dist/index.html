@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Wayne Ho</title>
+        <meta name="description" content="My Personal Page">
+        <meta name="author" content="Wayne Ho">
+
+        <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+
+        <!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="img/favicon.png">
+
+        <link rel="stylesheet" href="css/main.min.css">
+        <link rel="stylesheet" href="css/octicons/octicons.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="loader">
+            <div class="whirly-loader"></div>
+        </div>
+
+        <div class="front-page">
+            <div class="face-image">
+                <img src="img/face.png">
+            </div>
+            <div class="content-section">
+                <h4>Hello, I am Wayne!</h4>
+                <p>I am a Software Developer living in Vancouver, Canada.</p>
+                <a class="button" href="#projects">Learn More</a>
+            </div>
+        </div>
+
+        <div id="background-wrapper">
+            <div id="background-gradient"></div>
+            <div id="background-image"></div>
+            <canvas id="background-animation" data-processing-sources="myProcessingCode.pde"></canvas>
+        </div>
+
+        <div class="content-wrapper">
+
+            <aside class="sidebar">
+                <div class="sidebar-button">
+                    <span class="octicon octicon-triangle-right"></span>
+                </div>
+                <div class="sidebar-main">
+                    <h1 class="nav-header"><a href="#">WAYNE HO</a></h1>
+                    <div class="nav-divider"></div>
+                    <div class="nav-links">
+                        <ul>
+                            <li id="project-tab">
+                                <a href="#projects" ><span class="mega-octicon octicon-file-directory"></span><span class="nav-link-title">Projects</span></a>
+                            </li>
+                            <li id="skills-tab">
+                                <a href="#skills"><span class="mega-octicon octicon-checklist"></span><span class="nav-link-title">Skills</span></a>
+                            </li>
+                            <li id="about-tab">
+                                <a href="#about"><span class="mega-octicon octicon-info"></span><span class="nav-link-title">About</span></a>
+                            </li>
+                            <li id="contact-tab">
+                                <a href="#contact" ><span class="mega-octicon octicon-mail"></span><span class="nav-link-title">Contact</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- Primary Page Layout
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+            <div class="main">
+                <!-- Projects page -->
+                <div class="container projects">
+                    <div class="row heading">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="row content-section">
+                        <div class="five columns carousel"><div class="img-wrapper"></div><div class="slide-nav"><ul></ul></div></div>
+                        <div class="seven columns">
+                            <h6>Texas Method Program Generator</h6>
+                            <p>
+                                The Texas Method is a strength training program that manipulates the individual’s training variables (volume and intensity) to increase gains on a weekly basis.  This app generates next week’s training numbers depending on the user’s difficulty in the previous week and graphs each week’s five rep max to show strength progression.
+                            </p>
+                            <a class="button" href="http://texas-method.azurewebsites.net/#/" target="_blank">Example</a>
+                            <a class="button" href="https://github.com/wayneho/texas-method-calculator" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row content-section">
+                        <div class="five columns carousel"><div class="img-wrapper"></div><div class="slide-nav"><ul></ul></div></div>
+                        <div class="seven columns">
+                            <h6>The Open Movie Database</h6>
+                            <p>
+                                Web app created using jQuery to make ajax requests to the Open Movie Database API.  The user can search for specific or random movies.   The "Find Random Movies" button displays movies in increments of ten and loads another ten when the user scrolls to the bottom of the page.  Clicking on a movie displays more information about the movie.
+                            </p>
+                            <a class="button" href="https://rawgit.com/wayneho/Ajax-Infinite-Scroll/master/index.html" target="_blank">Example</a>
+                            <a class="button" href="https://github.com/wayneho/Ajax-Infinite-Scroll" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row content-section">
+                        <div class="five columns carousel"><div class="img-wrapper"></div><div class="slide-nav"><ul></ul></div></div>
+                        <div class="seven columns">
+                            <h6>Newsweek Clone</h6>
+                            <p>
+                                Fully responsive clone of the website <a href="http://www.newsweek.com">Newsweek</a> using Twitter’s Bootstrap framework.
+                            </p>
+                            <a class="button" href="projects/newsweek/index.html" target="_blank">Example</a>
+                            <a class="button" href="https://github.com/wayneho/Newsweek_Replica" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row content-section">
+                        <div class="five columns"><iframe src="https://www.youtube.com/embed/uw1ZF-nxOGY" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="seven columns">
+                            <h6>Remote Linux Video Player</h6>
+                            <p>
+                                A Linux server that accepts a string from a remote client containing a download URL to a video file.  If the file already exists locally then it plays the video full screen using OpenCV.  If the file does not exist then it downloads the video first.
+                            </p>
+                            <a class="button" href="https://github.com/wayneho/Remote_Linux_video_player" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="section-divider"></div>
+                    <div class="row content-section">
+                        <div class="five columns"><iframe src="https://www.youtube.com/embed/VMtSydjA_Ow" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="seven columns">
+                            <h6>Microcontroller Handheld Game</h6>
+                            <p>
+                                A handheld game developed on a Tiva C 32-bit microcontroller interfaced to multiple peripherals.  The object of the game is to avoid being hit by flying asteroids. Each sprite’s pixel data was encoded in an 8-bit color palette lookup table to significantly reduce the memory size.
+                            </p>
+                            <a class="button" href="https://github.com/wayneho/Asteroidz" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- technical skills page -->
+                <div class="container skills">
+                    <div class="row heading">
+                        <h2>Technical Skills</h2>
+                    </div>
+                    <div class="row content-section">
+                        <div class="four columns">
+                            <div class="row heading">
+                                <span class="mega-octicon octicon-file-code"></span>
+                                <h6>Languages and Frameworks</h6>
+                            </div>
+                            <div class="section-divider"></div>
+                            <div class="content-section">
+                                <ul>
+                                    <li>C</li>
+                                    <li>JavaScript, jQuery</li>
+                                    <li>HTML, CSS</li>
+                                    <li>MongoDB</li>
+                                    <li>Express.js</li>
+                                    <li>Angular.js</li>
+                                    <li>Node.js</li>
+                                    <li>Processing.js</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="row heading">
+                                <span class="mega-octicon octicon-tools"></span>
+                                <h6>Hardware</h6>
+                            </div>
+                            <div class="section-divider"></div>
+                            <div class="content-section">
+                                <ul>
+                                    <li>Microcontroller</li>
+                                    <li>Oscilloscope</li>
+                                    <li>Multimeter</li>
+                                    <li>Soldering Iron</li>
+                                    <li>Function Generator</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="row heading">
+                                <span class="mega-octicon octicon-device-desktop"></span>
+                                <h6>Software</h6>
+                            </div>
+                            <div class="section-divider"></div>
+                            <div class="content-section">
+                                <ul>
+                                    <li>GitHub</li>
+                                    <li>WebStorm</li>
+                                    <li>Quartus 2</li>
+                                    <li>Code Composer Studio 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- about page -->
+                <div class="container about">
+                    <div class="row heading">
+                        <h2>About</h2>
+                    </div>
+                    <div class="row content-section">
+                        <p>
+                            I am an aspiring software developer with a Bachelor’s degree in Electrical Engineering from the University of British Columbia.  I love to code, play video games, and lift heavy things.
+                        </p>
+                    </div>
+                    <div class="row content-section">
+                        <ul>
+                            <li>
+                                <a href="https://www.github.com/wayneho" target="_blank"><span class="mega-octicon octicon-mark-github"></span><p>GitHub</p></a>
+                            </li>
+                            <li>
+                                <a href="files/Wayne-Ho-Resume.pdf" download="wayne ho resume" target="_blank"><span class="mega-octicon octicon-file-pdf"></span><p>Resume</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- contact form page -->
+                <div class="container contact">
+                    <div class="row heading">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="content-section">
+                        <form id="contact-form" action="//formspree.io/wayneho92@hotmail.com" method="post">
+                            <div class="row">
+                                <div class="six columns">
+                                    <label for="NameInput">Name</label>
+                                    <input class="u-full-width" type="text" name="name" placeholder="Johnny Apple" id="NameInput" required>
+                                </div>
+                                <div class="six columns">
+                                    <label for="EmailInput">Email</label>
+                                    <input class="u-full-width" type="email" name="_replyto" placeholder="japple@email.com" id="EmailInput" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="Message">Message</label>
+                                <textarea class="u-full-width" name="Message" placeholder="Hi Wayne ..." id="Message" style="height: 150px" required></textarea>
+                                <div>
+                                    <input class="button-primary" type="submit" value="Submit">
+                                </div>
+                                <div id="alert"></div>
+                            </div>
+                            <!-- CONFIG -->
+                            <input type="text" name="_gotcha" style="display:none" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="js/main.min.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-71023952-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+    </body>
+</html>
