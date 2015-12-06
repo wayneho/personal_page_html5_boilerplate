@@ -104,6 +104,7 @@ $(window).bind('load',function(){
         console.log(window.location.hash);
         render(window.location.hash);
         resetCarousel(projectArray);
+        window.scrollTo(0,0);
     });
 });
 
@@ -124,13 +125,15 @@ function render(page){
 
     // stop background animation in sub-pages
     canvas.start = false;
+    $('#background-animation').hide();
 
     // hide current page
     $('.main>div').removeClass('visible');
     $('.nav-links li').removeClass('tab-active');
     $('.nav-links span').removeClass('text-white');
     $('.front-page').hide();
-    $('#background-animation').hide();
+
+
 
     // decide which page to show
     switch(page){
@@ -268,6 +271,7 @@ function transitionSlide(proj, direction,speed){
     speed = typeof speed !== 'undefined' ? speed : 500;
 
     // hide current image and remove active button style
+
     $(carousel+' .img-wrapper>img').hide('slide',{direction: direction},speed);
     $(carousel+' .slide-nav-btn').removeClass('btn-active');
 
