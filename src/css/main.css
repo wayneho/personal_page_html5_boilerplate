@@ -168,6 +168,9 @@ html {
     width: 100%;
     top: 0;
     left: 50%;
+    -ms-transform: translateX(-50%);  /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    -moz-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
 }
@@ -175,6 +178,9 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
+    -ms-transform: translate(-50%,-50%); /* IE 9 */
+    -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+    -moz-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color: grey;
 }
@@ -349,14 +355,15 @@ iframe{
     position: absolute;
     top: 50%;
     left: 50%;
+    -ms-transform: translate(-50%,-50%); /* IE 9 */
+    -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+    -moz-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
 
 .front-page{
     position: absolute;
     top: 120px;
-    left: 50%;
-    transform: translate(-50%,-20%);
     z-index: 99;
     display: none;
     text-align: center;
@@ -423,6 +430,18 @@ iframe{
     font-size: 48px;
 }
 
+.framework-image-wrapper{
+    text-align: center;
+    width: 45%;
+    margin: 1% 2%;
+    display: inline-block;
+}
+
+.framework-image-wrapper>img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
 /**************************************** Applied styles ********************************************/
 .expand-sidebar{
     display: inline;
@@ -468,10 +487,11 @@ iframe{
 
 @media (min-width: 400px){
     .front-page {
-        position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        -ms-transform: translateY(-50%); /* IE 9 */
+        -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     .face-image{
         border: 5px solid white;
@@ -483,6 +503,13 @@ iframe{
         height: auto;
     }
 }
+
+@media(min-width: 750px){
+    .framework-image-wrapper{
+        width: 20%;
+    }
+}
+
 @media (min-width: 1000px){
     .sidebar{
         max-width: 240px;
@@ -517,6 +544,7 @@ iframe{
         text-align: left;
         padding: 15px 60px;
     }
+
 }
 
 @media (min-width: 1200px){
