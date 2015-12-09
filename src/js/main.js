@@ -273,7 +273,7 @@ function transitionSlide(proj, direction,speed){
     // hide current image and remove active button style
 
     $(carousel+' .img-wrapper>img').hide('slide',{direction: direction},speed);
-    $(carousel+' .slide-nav-btn').removeClass('btn-active');
+    $(carousel+' .slide-nav-btn').removeClass('btn-active').css('pointer-events', 'none');
 
     // get next image
     var next = proj.getCurrent() + 1;   // nth-child pseudo-selector is not 0 indexed so 1 is added to the value
@@ -282,6 +282,11 @@ function transitionSlide(proj, direction,speed){
     $(carousel+' .img-wrapper>img:nth-child('+next+')').show('slide',{direction: direction==='left'?'right':'left'},speed);
     $(carousel+' .slide-nav-btn:nth-child('+next+')').addClass('btn-active');
 
+
+    // prevent users from clicking nav buttons while slide is still moving
+    setTimeout(function(){
+        $(carousel+' .slide-nav-btn').not('.btn-active').css('pointer-events', 'auto');
+    }, speed);
 }
 
 // transition to next slide every 5 secs
