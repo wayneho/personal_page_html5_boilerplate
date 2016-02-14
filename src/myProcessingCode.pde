@@ -4,7 +4,7 @@ void setup(){
 
   // dynamically resize canvas
   doResize();
-  frameRate(30);
+  frameRate(33);
 
 }
 
@@ -106,9 +106,11 @@ class Star{
 function doResize()
 {
   var width = $(window).width();
-  var setupHeight = Math.max($(document).height(), $(window).height());
+  //var setupHeight = Math.max($(document).height(), $(window).height());
+  setupHeight = $(window).height();
   $('#background-animation').width($(window).width());
   $('#background-animation').height(setupHeight);
+
   size(width, setupHeight);
 
   sky = new Sky(width);

@@ -227,7 +227,7 @@ html {
 
 .nav-header{
     margin: 0;
-    font-size: 2em;
+    font-size: 48px;
 }
 .nav-link-title{
     font-size: 16px;
@@ -336,14 +336,17 @@ iframe{
 
 #background-gradient{
     z-index: 1;
-    background: linear-gradient(#00254d, #0099CC);
-
+    background: #007e82;
+    background: -webkit-linear-gradient(#00254e 0,#003d82 30%, #007e82 75%, #00cf6e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00254e 0,#003d82 30%, #007e82 75%, #00cf6e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00254e 0,#003d82 30%, #007e82 75%, #00cf6e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00254e 0,#003d82 30%, #007e82 75%, #00cf6e);
 }
+
 #background-image{
     z-index: 3;
     background: url('../img/background.png') no-repeat left bottom fixed;
     background-size: 100%;
-
 }
 
 #background-animation{
@@ -537,7 +540,7 @@ iframe{
         display: inline-block;
     }
     .nav-header{
-        font-size: 48px;
+        font-size: 2em;
     }
     .nav-links li a {
         font-size: 16px;
