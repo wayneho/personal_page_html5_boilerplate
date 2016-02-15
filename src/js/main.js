@@ -110,6 +110,25 @@ $(window).bind('load',function(){
         resetCarousel(projectArray);
         window.scrollTo(0,0);
     });
+
+    // Load videos only when content is in view
+    $(window).scroll(function(){
+        if(!loadVid){
+            var offset = $('#vid1').offset();
+            if($(window).scrollTop()+$(window).height() > offset.top - 10){
+                $('#vid1').append('<iframe src="https://www.youtube.com/embed/uw1ZF-nxOGY" frameborder="0" allowfullscreen></iframe>');
+                $('#vid2').append('<iframe src="https://www.youtube.com/embed/VMtSydjA_Ow" frameborder="0" allowfullscreen></iframe>');
+
+                // set height equal to the image carousels
+                var wrapperHeight = $('.img-wrapper>img').height();
+                $('iframe').css('height', wrapperHeight);
+
+                loadVid = true;
+            }
+        }
+    })
+
+
 });
 
 // Initialize the first page to display
@@ -126,12 +145,6 @@ function render(page){
         // show sidebar and main section
         $('.sidebar').show('slide',{direction: 'left'}, 500);
         $('.main').addClass('visible');
-        // load videos if it hasn't been loaded yet
-        if(!loadVid){
-            $('#vid1').append('<iframe  src="https://www.youtube.com/embed/uw1ZF-nxOGY" frameborder="0" allowfullscreen></iframe>');
-            $('#vid2').append('<iframe  src="https://www.youtube.com/embed/VMtSydjA_Ow" frameborder="0" allowfullscreen></iframe>');
-            loadVid = true;
-        }
     }
 
     // stop background animation in sub-pages
