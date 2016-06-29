@@ -442,7 +442,7 @@ iframe{
 
 .framework-image-wrapper>img{
     max-width: 100%;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 /**************************************** Applied styles ********************************************/

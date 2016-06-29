@@ -47,19 +47,22 @@ var CarouselPrototype = {
     }
 };
 
-
+var proj0Images = ["img/muscle1.jpg", "img/muscle2.jpg"]
 var proj1Images = ["img/tm1.jpg","img/tm2.jpg","img/tm3.jpg","img/tm4.jpg"];
 var proj2Images = ["img/omdb1.jpg","img/omdb2.jpg","img/omdb3.jpg"];
 var proj3Images = ["img/newsweek1.jpg","img/newsweek2.jpg","img/newsweek3.jpg"];
 
-var project1 = Object.create(CarouselPrototype),
+var project0 = Object.create(CarouselPrototype),
+    project1 = Object.create(CarouselPrototype),
     project2 = Object.create(CarouselPrototype),
     project3 = Object.create(CarouselPrototype);
+
+project0.init(proj0Images);
 project1.init(proj1Images);
 project2.init(proj2Images);
 project3.init(proj3Images);
 
-var projectArray = [project1, project2, project3];
+var projectArray = [project0,project1, project2, project3];
 projectArray.forEach(function(project, ind){
     project.setIndex(ind);
 });
@@ -116,8 +119,7 @@ $(window).bind('load',function(){
         if(!loadVid){
             var offset = $('#vid1').offset();
             if($(window).scrollTop()+$(window).height() > offset.top - 10){
-                $('#vid1').append('<iframe src="https://www.youtube.com/embed/uw1ZF-nxOGY" frameborder="0" allowfullscreen></iframe>');
-                $('#vid2').append('<iframe src="https://www.youtube.com/embed/VMtSydjA_Ow" frameborder="0" allowfullscreen></iframe>');
+                $('#vid1').append('<iframe src="https://www.youtube.com/embed/VMtSydjA_Ow" frameborder="0" allowfullscreen></iframe>');
 
                 // set height equal to the image carousels
                 var wrapperHeight = $('.img-wrapper>img').height();
