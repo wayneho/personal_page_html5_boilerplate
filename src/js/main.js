@@ -47,22 +47,25 @@ var CarouselPrototype = {
     }
 };
 
-var proj0Images = ["img/muscle1.jpg", "img/muscle2.jpg"]
-var proj1Images = ["img/tm1.jpg","img/tm2.jpg","img/tm3.jpg","img/tm4.jpg"];
-var proj2Images = ["img/omdb1.jpg","img/omdb2.jpg","img/omdb3.jpg"];
-var proj3Images = ["img/newsweek1.jpg","img/newsweek2.jpg","img/newsweek3.jpg"];
+var proj0Images = ["img/weatherapp1.jpg", "img/weatherapp2.jpg"]
+var proj1Images = ["img/muscle1.jpg", "img/muscle2.jpg"]
+var proj2Images = ["img/tm1.jpg","img/tm2.jpg","img/tm3.jpg"];
+var proj3Images = ["img/omdb1.jpg","img/omdb2.jpg","img/omdb3.jpg"];
+var proj4Images = ["img/newsweek1.jpg","img/newsweek2.jpg","img/newsweek3.jpg"];
 
 var project0 = Object.create(CarouselPrototype),
     project1 = Object.create(CarouselPrototype),
     project2 = Object.create(CarouselPrototype),
     project3 = Object.create(CarouselPrototype);
+    project4 = Object.create(CarouselPrototype);
 
 project0.init(proj0Images);
 project1.init(proj1Images);
 project2.init(proj2Images);
 project3.init(proj3Images);
+project4.init(proj4Images);
 
-var projectArray = [project0,project1, project2, project3];
+var projectArray = [project0, project1, project2, project3, project4];
 projectArray.forEach(function(project, ind){
     project.setIndex(ind);
 });
